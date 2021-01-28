@@ -101,6 +101,8 @@ public class IgniteNode implements BenchmarkServer {
         if (args.clientNodesAfterId() >= 0 && cfg.memberId() > args.clientNodesAfterId())
             clientMode = true;
 
+        BenchmarkUtils.println("Ignite clientMode is " + this.clientMode);
+
         IgniteBiTuple<IgniteConfiguration, ? extends ApplicationContext> tup = loadConfiguration(args.configuration());
 
         IgniteConfiguration c = tup.get1();
