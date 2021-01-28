@@ -119,6 +119,30 @@
             <artifactId>annotations</artifactId>
             <version>16.0.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>oro</groupId>
+            <artifactId>oro</artifactId>
+            <version>2.0.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-i18n</artifactId>
+            <version>1.0-beta-7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.5</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -151,7 +175,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/libs</outputDirectory>
+                            <outputDirectory>${basedir}/target/assembly/libs</outputDirectory>
                             <excludeTypes>pom</excludeTypes>
                         </configuration>
                     </execution>
